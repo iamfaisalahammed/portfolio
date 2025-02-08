@@ -1,19 +1,35 @@
+import { IoMdDownload } from "react-icons/io";
 import { NavLink } from "react-router-dom";
+import img from "../../Image/Picsart_icon.png";
 
 const Nav = () => {
   const link = (
     <>
-      <NavLink to="/">HOME</NavLink>
-      <NavLink to="/about">ABOUT</NavLink>
-      <NavLink to="/skills">SKILLS</NavLink>
-      <NavLink to="/education">EDUCATION</NavLink>
-      <NavLink to="/project">PROJECTS</NavLink>
-      <NavLink to="/contact">CONTACT</NavLink>
+      <NavLink to="/" className="hover:text-gray-300">
+        HOME
+      </NavLink>
+      <NavLink to="/about" className="hover:text-gray-300">
+        ABOUT
+      </NavLink>
+      <NavLink to="/skills" className="hover:text-gray-300">
+        SKILLS
+      </NavLink>
+      <NavLink to="/education" className="hover:text-gray-300">
+        EDUCATION
+      </NavLink>
+      <NavLink to="/project" className="hover:text-gray-300">
+        PROJECTS
+      </NavLink>
+      <NavLink to="/contact" className="hover:text-gray-300">
+        CONTACT
+      </NavLink>
     </>
   );
+
   return (
     <div>
-      <div className="navbar bg-black fix bg-opacity-50">
+      {/* Navbar */}
+      <div className="navbar fixed top-0 left-0 w-full bg-white/10 backdrop-blur-lg border-b border-white/20 shadow-lg z-50">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -23,7 +39,7 @@ const Nav = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -38,18 +54,23 @@ const Nav = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-white/10 backdrop-blur-lg text-white rounded-box z-50 mt-3 w-52 p-2 shadow-lg border border-white/20"
             >
               {link}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl text-white">F</a>
+          <a className="text-xl text-white font-bold flex items-center justify-center gap-2">
+            <img className="size-8" src={img} alt="" />
+            Faisal Ahammed
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-white gap-3">{link}</ul>
+          <ul className="menu menu-horizontal px-1 text-white gap-6">{link}</ul>
         </div>
-        <div className="navbar-end text-white">
-          <a className="">RESUME</a>
+        <div className="navbar-end">
+          <a className="text-white font-medium hover:text-gray-300 flex items-center gap-2">
+            RESUME <IoMdDownload></IoMdDownload>
+          </a>
         </div>
       </div>
     </div>
