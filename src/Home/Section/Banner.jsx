@@ -15,7 +15,7 @@ const Banner = () => {
               and building solutions that make an impact!
             </p>
             <button className="btn glass mt-3 text-black uppercase font-bold">
-              Glass Button
+              hire me
             </button>
           </div>
         </div>

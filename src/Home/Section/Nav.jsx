@@ -1,16 +1,27 @@
 import { IoMdDownload } from "react-icons/io";
+import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import img from "../../Image/Picsart_icon.png";
 
 const Nav = () => {
   const link = (
     <>
-      <NavLink to="/" className="hover:text-gray-300">
+      <Link
+        to="home"
+        smooth={true}
+        duration={500}
+        className="cursor-pointer hover:text-gray-300"
+      >
         HOME
-      </NavLink>
-      <NavLink to="/about" className="hover:text-gray-300">
+      </Link>
+      <Link
+        to="about-section"
+        smooth={true}
+        duration={500}
+        className="cursor-pointer hover:text-gray-300"
+      >
         ABOUT
-      </NavLink>
+      </Link>
       <NavLink to="/skills" className="hover:text-gray-300">
         SKILLS
       </NavLink>
