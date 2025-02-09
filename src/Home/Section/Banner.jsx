@@ -8,7 +8,9 @@ const Banner = () => {
           <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20 glass ">
             <h3 className="text-white">Hello, I am</h3>
             <h1 className="text-3xl font-bold text-white">Faisal Ahammed</h1>
-            <p className="py-2 text-white uppercase ">full stack developer </p>
+            <p className="py-2 text-lg text-white uppercase ">
+              full stack developer{" "}
+            </p>
             <p className="text-gray-300">
               I am a passionate web developer with a keen interest in exploring
               and mastering new technologies. Constantly learning, innovating,

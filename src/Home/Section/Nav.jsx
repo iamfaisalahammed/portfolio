@@ -1,7 +1,7 @@
 import { IoMdDownload } from "react-icons/io";
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
-import img from "../../Image/Picsart_icon.png";
+import img from "../../Image/icon/Picsart_25-02-09_05-12-57-291.png";
 
 const Nav = () => {
   const link = (
@@ -22,12 +22,23 @@ const Nav = () => {
       >
         ABOUT
       </Link>
-      <NavLink to="/skills" className="hover:text-gray-300">
+      <Link
+        to="skills"
+        smooth={true}
+        duration={500}
+        className="cursor-pointer hover:text-gray-300"
+      >
         SKILLS
-      </NavLink>
-      <NavLink to="/education" className="hover:text-gray-300">
+      </Link>
+      <Link
+        to="education"
+        smooth={true}
+        duration={500}
+        className="cursor-pointer hover:text-gray-300"
+      >
         EDUCATION
-      </NavLink>
+      </Link>
+
       <NavLink to="/project" className="hover:text-gray-300">
         PROJECTS
       </NavLink>
@@ -71,8 +82,7 @@ const Nav = () => {
             </ul>
           </div>
           <a className="text-xl text-white font-bold flex items-center justify-center gap-2">
-            <img className="size-8" src={img} alt="" />
-            Faisal Ahammed
+            <img className="size-8 w-full" src={img} alt="" />
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
