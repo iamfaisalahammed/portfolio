@@ -1,6 +1,5 @@
 import { IoMdDownload } from "react-icons/io";
 import { Link } from "react-scroll";
-import { NavLink } from "react-router-dom";
 import img from "../../Image/icon/Picsart_25-02-09_05-12-57-291.png";
 
 const Nav = () => {
@@ -10,7 +9,7 @@ const Nav = () => {
         to="home"
         smooth={true}
         duration={500}
-        className="cursor-pointer hover:text-gray-300"
+        className="cursor-pointer font-semibold hover:text-gray-300"
       >
         HOME
       </Link>
@@ -18,7 +17,7 @@ const Nav = () => {
         to="about-section"
         smooth={true}
         duration={500}
-        className="cursor-pointer hover:text-gray-300"
+        className="cursor-pointer font-semibold hover:text-gray-300"
       >
         ABOUT
       </Link>
@@ -26,7 +25,7 @@ const Nav = () => {
         to="skills"
         smooth={true}
         duration={500}
-        className="cursor-pointer hover:text-gray-300"
+        className="cursor-pointer font-semibold hover:text-gray-300"
       >
         SKILLS
       </Link>
@@ -34,17 +33,26 @@ const Nav = () => {
         to="education"
         smooth={true}
         duration={500}
-        className="cursor-pointer hover:text-gray-300"
+        className="cursor-pointer font-semibold hover:text-gray-300"
       >
         EDUCATION
       </Link>
-
-      <NavLink to="/project" className="hover:text-gray-300">
+      <Link
+        to="project"
+        smooth={true}
+        duration={500}
+        className="cursor-pointer font-semibold hover:text-gray-300"
+      >
         PROJECTS
-      </NavLink>
-      <NavLink to="/contact" className="hover:text-gray-300">
+      </Link>
+      <Link
+        to="contact"
+        smooth={true}
+        duration={500}
+        className="cursor-pointer font-semibold hover:text-gray-300"
+      >
         CONTACT
-      </NavLink>
+      </Link>
     </>
   );
 

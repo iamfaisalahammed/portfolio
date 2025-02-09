@@ -32,13 +32,13 @@ const About = () => {
               delivering seamless user experiences.
             </p>
             <div className="flex justify-center gap-3 mt-6">
-              <button className="btn glass mt-3 text-white uppercase rounded-full text-xl font-bold">
+              <button className="btn glass mt-3 hover:bg-blue-950  text-white uppercase rounded-full text-xl font-bold">
                 <FaLinkedin></FaLinkedin>
               </button>
-              <button className="btn glass mt-3 text-white uppercase rounded-full text-xl font-bold">
+              <button className="btn glass mt-3 hover:bg-blue-950  text-white uppercase rounded-full text-xl font-bold">
                 <FaX></FaX>
               </button>
-              <button className="btn glass mt-3 text-white uppercase rounded-full text-xl font-bold">
+              <button className="btn glass mt-3 hover:bg-blue-950  text-white uppercase rounded-full text-xl font-bold">
                 <FaGithub></FaGithub>
               </button>
             </div>

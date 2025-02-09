@@ -22,8 +22,8 @@ const Skills = () => {
       <div className="bg-black flex flex-col md:flex-row justify-center gap-6 py-4">
         {/* Technologies */}
         <div className="bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-xl border border-white/20 glass w-full md:w-1/2">
-          <p className="text-center text-white uppercase font-bold mb-3">
-            -- Technologies --
+          <p className="text-center text-xl text-white uppercase font-bold mb-3">
+            Technologies
           </p>
           <div className="grid grid-cols-3 gap-4 place-items-center">
             <img className="size-12" src={html} alt="html" />
@@ -40,8 +40,8 @@ const Skills = () => {
 
         {/* Tools */}
         <div className="bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-xl border border-white/20 glass w-full md:w-1/2">
-          <p className="text-center text-white uppercase font-bold mb-3">
-            -- Tools --
+          <p className="text-center text-xl text-white uppercase font-bold mb-3">
+            Tools
           </p>
           <div className="grid grid-cols-3 gap-4 place-items-center">
             <img className="size-12" src={git} alt="git" />

@@ -1,8 +1,10 @@
 import About from "./Section/About";
 import Banner from "./Section/Banner";
+import Contact from "./Section/Contact";
 import Education from "./Section/Education";
 import Footer from "./Section/Footer";
 import Nav from "./Section/Nav";
+import Project from "./Section/Project";
 import Skills from "./Section/Skills";
 
 const Home = () => {
@@ -21,6 +23,12 @@ const Home = () => {
         </div>
         <div id="education">
           <Education></Education>
+        </div>
+        <div id="project">
+          <Project></Project>
+        </div>
+        <div id="contact">
+          <Contact></Contact>
         </div>
         <Footer></Footer>
       </div>
