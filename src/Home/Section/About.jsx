@@ -4,10 +4,10 @@ import img from "../../Image/Ahammed.jpg";
 const About = () => {
   return (
     <section className="mb-2">
-      <h1 className="text-3xl font-bold text-center my-4 text-white">
+      <h1 className="text-3xl bg-[#121212] font-bold text-center my-4 text-white">
         About Me
       </h1>
-      <div className="hero bg-black min-h-screen">
+      <div className="hero bg-[#121212] min-h-screen">
         <div className="hero-content flex-col lg:flex-row gap-10 items-start justify-start">
           <div className="relative w-full sm:w-11/12 lg:w-auto">
             <div className="hidden lg:block lg:absolute top-8 left-16 border-8 border-gray-300 w-full h-full rounded-xl"></div>
@@ -32,15 +32,21 @@ const About = () => {
               delivering seamless user experiences.
             </p>
             <div className="flex justify-center gap-3 mt-6">
-              <button className="btn glass mt-3 hover:bg-blue-950  text-white uppercase rounded-full text-xl font-bold">
-                <FaLinkedin></FaLinkedin>
+              <a
+                href=""
+                className="btn glass mt-3 text-white uppercase hover:bg-blue-950 rounded-full text-xl font-bold shadow-lg shadow-blue-500 animate-pulse"
+              >
+                <FaLinkedin />
+              </a>
+              <button className="btn glass mt-3 text-white uppercase hover:bg-blue-950  rounded-full text-xl font-bold shadow-lg shadow-blue-500 animate-pulse">
+                <FaX />
               </button>
-              <button className="btn glass mt-3 hover:bg-blue-950  text-white uppercase rounded-full text-xl font-bold">
-                <FaX></FaX>
-              </button>
-              <button className="btn glass mt-3 hover:bg-blue-950  text-white uppercase rounded-full text-xl font-bold">
-                <FaGithub></FaGithub>
-              </button>
+              <a
+                href="https://github.com/faisal-devs"
+                className="btn glass mt-3 text-white uppercase  hover:bg-blue-950  rounded-full text-xl font-bold shadow-lg shadow-blue-500 animate-pulse"
+              >
+                <FaGithub />
+              </a>
             </div>
           </div>
         </div>

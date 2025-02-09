@@ -1,19 +1,20 @@
+import { FaArrowRight } from "react-icons/fa6";
 import img from "../../Image/Ahammed.jpg";
 const Project = () => {
   return (
     <section className="mb-2">
-      <h1 className="text-3xl font-bold text-center my-4 text-white uppercase">
+      <h1 className="text-3xl bg-[#121212] font-bold text-center my-4 text-white uppercase">
         Project
       </h1>
 
       {/* Project -1 */}
-      <div className="hero bg-black min-h-screen pb-4">
+      <div className="hero bg-[#121212]  min-h-screen pb-4">
         <div className="hero-content flex-col lg:flex-row gap-10 items-start justify-start">
           <div className="relative w-full sm:w-11/12 lg:w-auto">
             <div className="hidden lg:block lg:absolute top-8 left-16 border-8 border-gray-300 w-full h-full rounded-xl"></div>
             <img
               src={img}
-              className="max-w-sm rounded-lg shadow-2xl w-11/12 lg:w-auto lg:relative"
+              className="max-w-sm  rounded-lg shadow-2xl w-11/12 lg:w-auto lg:relative"
             />
           </div>
           <div className="text-left">
@@ -34,9 +35,10 @@ const Project = () => {
               write clean, maintainable, and optimized code while focusing on
               delivering seamless user experiences.
               <br />
-              <div className=" flex justify-center">
-                <button className="px-4 py-2  glass btn text-white rounded-lg  hover:bg-blue-950 transition my-4">
+              <div className="flex justify-center">
+                <button className="px-2  py-2 glass btn text-white rounded-lg hover:bg-black transition my-4 flex items-center group">
                   Live Demo
+                  <FaArrowRight className=" transition-transform transform group-hover:scale-125 group-hover:translate-x-1" />
                 </button>
               </div>
             </p>
@@ -44,7 +46,7 @@ const Project = () => {
         </div>
       </div>
       {/* Project -2 */}
-      <div className="hero bg-black min-h-screen pb-4">
+      <div className="hero bg-[#121212]  min-h-screen pb-4">
         <div className="hero-content flex-col lg:flex-row gap-10 items-start justify-start">
           <div className="text-left">
             <h3 className="text-white text-xl font-semibold mt-3 lg:mx-auto lg:w-8/12">
@@ -64,9 +66,10 @@ const Project = () => {
               write clean, maintainable, and optimized code while focusing on
               delivering seamless user experiences.
               <br />
-              <div className=" flex justify-center">
-                <button className="px-4 py-2  glass btn text-white rounded-lg  hover:bg-blue-950  transition my-4">
+              <div className="flex justify-center">
+                <button className="px-2 py-2 glass btn text-white rounded-lg hover:bg-black transition my-4 flex items-center group">
                   Live Demo
+                  <FaArrowRight className=" transition-transform transform group-hover:scale-125 group-hover:translate-x-1" />
                 </button>
               </div>
             </p>
@@ -81,7 +84,7 @@ const Project = () => {
         </div>
       </div>
       {/* Project -3 */}
-      <div className="hero bg-black min-h-screen pb-4">
+      <div className="hero bg-[#121212]  min-h-screen pb-4">
         <div className="hero-content flex-col lg:flex-row gap-10 items-start justify-start">
           <div className="relative w-full sm:w-11/12 lg:w-auto">
             <div className="hidden lg:block lg:absolute top-8 left-16 border-8 border-gray-300 w-full h-full rounded-xl"></div>
@@ -108,9 +111,10 @@ const Project = () => {
               write clean, maintainable, and optimized code while focusing on
               delivering seamless user experiences.
               <br />
-              <div className=" flex justify-center">
-                <button className="px-4 py-2 glass btn text-white rounded-lg  hover:bg-blue-950  transition my-4">
+              <div className="flex justify-center">
+                <button className="px-2 py-2 glass btn text-white rounded-lg hover:bg-black transition my-4 flex items-center group">
                   Live Demo
+                  <FaArrowRight className=" transition-transform transform group-hover:scale-125 group-hover:translate-x-1" />
                 </button>
               </div>
             </p>

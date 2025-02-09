@@ -84,7 +84,7 @@ const Nav = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-white/10 backdrop-blur-lg text-white rounded-box z-50 mt-3 w-52 p-2 shadow-lg border border-white/20"
+              className="menu menu-sm dropdown-content gap-y-3 bg-white/10 backdrop-blur-lg text-white rounded-box z-50 mt-3 w-52 p-2 shadow-lg border border-white/20"
             >
               {link}
             </ul>

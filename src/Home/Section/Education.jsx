@@ -2,18 +2,18 @@ import { FaGraduationCap } from "react-icons/fa";
 
 const Education = () => {
   return (
-    <section>
-      <h2 className="text-center text-white text-3xl font-bold uppercase mb-2">
+    <section className="mt-5">
+      <h2 className="text-center bg-[#121212] text-white text-3xl font-bold uppercase pt-5 pb-5">
         EDUCATION
       </h2>
-      <div className="flex justify-center items-center bg-black py-8  px-4">
+      <div className="flex justify-center items-center bg-[#121212]  py-8  px-4">
         <div
           className="w-full max-w-md bg-white/10 backdrop-blur-md p-8 rounded-xl border border-gray-300/30 shadow-lg 
                       hover:shadow-blue-500/40 transition duration-300 group relative"
         >
           {/* Icon */}
           <div
-            className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-14 h-14 
+            className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-14 h-14 animate-pulse
                         bg-gradient-to-r from-purple-500 to-blue-500 text-white flex items-center justify-center 
                         rounded-full shadow-lg"
           >
