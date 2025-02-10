@@ -50,20 +50,34 @@ const Skills = () => {
   const [techColor, setTechColor] = useState("#FFFFFF");
   const [toolColor, setToolColor] = useState("#FFFFFF");
 
+  // Variants for animation control
+  const bounceVariant = {
+    hidden: { y: 50, opacity: 0 },
+    visible: (index) => ({
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: index * 0.2,
+        duration: 0.5,
+        type: "spring",
+        stiffness: 100,
+      },
+    }),
+  };
+
   return (
     <div className="px-4 overflow-hidden">
       <h1 className="text-3xl font-bold text-center mb-2 text-white">SKILLS</h1>
       <div className="bg-[#212122] flex flex-col md:flex-row justify-center gap-6 py-4">
         {/* Technologies */}
         <motion.div
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           className="bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-xl border border-white/20 glass w-full md:w-1/2"
         >
           <p
-            className="text-center   text-xl uppercase font-bold mb-8 transition-all"
+            className="text-center text-xl uppercase font-bold mb-8 transition-all"
             style={{ color: techColor }}
           >
             {techName}
@@ -71,9 +85,11 @@ const Skills = () => {
           <div className="relative">
             <div className="grid grid-cols-3 gap-4 place-items-center">
               {skillsData.map((skill, index) => (
-                <div
+                <motion.div
                   key={index}
                   className="group relative"
+                  custom={index}
+                  variants={bounceVariant}
                   onMouseEnter={() => {
                     setTechName(skill.name);
                     setTechColor(skill.color);
@@ -84,11 +100,11 @@ const Skills = () => {
                   }}
                 >
                   <img
-                    className="size-12 animate-bounce transition-all"
+                    className="size-12 transition-all"
                     src={skill.img}
                     alt={skill.name}
                   />
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -96,9 +112,8 @@ const Skills = () => {
 
         {/* Tools */}
         <motion.div
-          initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           className="bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-xl border border-white/20 glass w-full md:w-1/2"
         >
@@ -111,9 +126,11 @@ const Skills = () => {
           <div className="relative">
             <div className="grid grid-cols-3 gap-4 place-items-center">
               {toolsData.map((tool, index) => (
-                <div
+                <motion.div
                   key={index}
                   className="group relative"
+                  custom={index}
+                  variants={bounceVariant}
                   onMouseEnter={() => {
                     setToolName(tool.name);
                     setToolColor(tool.color);
@@ -124,11 +141,11 @@ const Skills = () => {
                   }}
                 >
                   <img
-                    className="size-12 animate-bounce transition-all"
+                    className="size-12 transition-all"
                     src={tool.img}
                     alt={tool.name}
                   />
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
