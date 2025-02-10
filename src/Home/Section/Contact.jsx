@@ -34,7 +34,7 @@ const Contact = () => {
         CONTACT
       </h1>
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left Section - Contact Info */}
           <div className="bg-white/10 p-8 rounded-2xl shadow-xl backdrop-blur-lg border border-white/20">
             <h3 className="text-2xl font-semibold mb-4">Get in Touch</h3>
@@ -47,19 +47,23 @@ const Contact = () => {
                 <div className="bg-white/20 p-4 rounded-xl shadow-md backdrop-blur-sm">
                   <FaPhoneAlt className="text-blue-400 text-xl"></FaPhoneAlt>
                 </div>
-                <span className="text-lg">+8801820037321</span>
+                <span className="text-sm sm:text-lg">+8801820037321</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="bg-white/20 p-4 rounded-xl shadow-md backdrop-blur-sm">
                   <FaEnvelope className="text-blue-400 text-xl"></FaEnvelope>
                 </div>
-                <span className="text-lg">faisalahammed003@gmail.com</span>
+                <span className="text-sm sm:text-lg">
+                  faisalahammed003@gmail.com
+                </span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="bg-white/20 p-4 rounded-xl shadow-md backdrop-blur-sm">
                   <FaMapMarkerAlt className="text-blue-400 text-xl"></FaMapMarkerAlt>
                 </div>
-                <span className="text-lg">Chittagong, Bangladesh</span>
+                <span className="text-sm sm:text-lg">
+                  Chittagong, Bangladesh
+                </span>
               </div>
             </div>
           </div>
