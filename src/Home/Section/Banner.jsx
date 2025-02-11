@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import img from "../../Image/faisal-devs.jpg";
+import img from "../../Image/faisal-ahammed.jpg";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const AnimatedText = () => {
