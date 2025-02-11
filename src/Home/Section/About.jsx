@@ -9,7 +9,7 @@ const About = () => {
       </h1>
       <div className="hero bg-[#121212] min-h-screen">
         <div className="hero-content flex-col lg:flex-row gap-10 items-start justify-start">
-          <div className="relative w-full sm:w-11/12 lg:w-auto">
+          <div className="relative md:justify-center md:flex w-full sm:w-11/12 lg:w-auto">
             <div className="hidden lg:block lg:absolute top-8 left-16 border-8 border-gray-300 w-full h-full rounded-xl"></div>
             <img
               src={img}

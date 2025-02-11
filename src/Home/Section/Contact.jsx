@@ -47,13 +47,13 @@ const Contact = () => {
                 <div className="bg-white/20 p-4 rounded-xl shadow-md backdrop-blur-sm">
                   <FaPhoneAlt className="text-blue-400 text-xl"></FaPhoneAlt>
                 </div>
-                <span className="text-sm sm:text-lg">+8801820037321</span>
+                <span className="text-sm lg:text-lg">+8801820037321</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="bg-white/20 p-4 rounded-xl shadow-md backdrop-blur-sm">
                   <FaEnvelope className="text-blue-400 text-xl"></FaEnvelope>
                 </div>
-                <span className="text-sm sm:text-lg">
+                <span className="text-sm lg:text-lg">
                   faisalahammed003@gmail.com
                 </span>
               </div>
@@ -61,7 +61,7 @@ const Contact = () => {
                 <div className="bg-white/20 p-4 rounded-xl shadow-md backdrop-blur-sm">
                   <FaMapMarkerAlt className="text-blue-400 text-xl"></FaMapMarkerAlt>
                 </div>
-                <span className="text-sm sm:text-lg">
+                <span className="text-sm lg:text-lg">
                   Chittagong, Bangladesh
                 </span>
               </div>

@@ -9,7 +9,7 @@ const Project = () => {
       {/* Project -1 */}
       <div className="hero bg-[#121212]  min-h-screen pb-4">
         <div className="hero-content flex-col lg:flex-row gap-10 items-start justify-start">
-          <div className="relative w-full sm:w-11/12 lg:w-auto">
+          <div className="relative w-full md:justify-center md:flex sm:w-11/12 lg:w-auto">
             <div className="hidden lg:block lg:absolute top-8 left-16 border-8 border-white  w-full h-full rounded-xl"></div>
             <img
               src="https://i.ibb.co.com/B2FFntV5/Blood-Donation-02-10-2025-08-26-PM.png"
@@ -98,7 +98,7 @@ const Project = () => {
               </div>
             </p>
           </div>
-          <div className="relative w-full sm:w-11/12 lg:w-auto">
+          <div className="relative w-full md:justify-center md:flex sm:w-11/12 lg:w-auto">
             <div className="hidden lg:block lg:absolute top-8 right-16 border-8 border-white w-full h-full rounded-xl"></div>
             <img
               src="https://i.ibb.co.com/rf6fcGB9/lost-and-found.png"
@@ -110,7 +110,7 @@ const Project = () => {
       {/* Project -3 */}
       <div className="hero bg-[#121212]  min-h-screen pb-4">
         <div className="hero-content flex-col lg:flex-row gap-10 items-start justify-start">
-          <div className="relative w-full sm:w-11/12 lg:w-auto">
+          <div className="relative w-full md:justify-center md:flex sm:w-11/12 lg:w-auto">
             <div className="hidden lg:block lg:absolute top-8 left-16 border-8 border-white w-full h-full rounded-xl"></div>
             <img
               src="https://i.ibb.co.com/v87C9HT/Winter-Donation-02-10-2025-08-57-PM.png"
