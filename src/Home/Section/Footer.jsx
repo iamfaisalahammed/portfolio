@@ -16,7 +16,7 @@ const Footer = () => {
           </a>
         </a>
         <a
-          href=""
+          href="https://x.com/faisalahammed02"
           className="bg-white/20   p-4 rounded-xl shadow-md backdrop-blur-sm  animate-pulse"
         >
           <a>
@@ -25,7 +25,7 @@ const Footer = () => {
         </a>
 
         <a
-          href=""
+          href="https://www.linkedin.com/in/faisalahammed/"
           className="bg-white/20 p-4 rounded-xl shadow-md backdrop-blur-sm animate-pulse"
         >
           <a>

@@ -52,22 +52,22 @@ const Banner = () => {
             </p>
             <div className="flex gap-3 mt-6">
               <a
-                href=""
+                href="https://www.linkedin.com/in/faisalahammed/"
                 className="btn glass mt-3 text-white uppercase hover:bg-blue-950 rounded-full text-xl font-bold shadow-lg shadow-blue-500 animate-bounce1"
               >
-                <FaLinkedin />
+                <FaLinkedin></FaLinkedin>
               </a>
               <a
                 href="https://www.facebook.com/FaisalAhammed00/"
                 className="btn glass mt-3 text-white uppercase hover:bg-blue-950 rounded-full text-xl font-bold shadow-lg shadow-blue-500 animate-bounce2"
               >
-                <FaFacebook />
+                <FaFacebook></FaFacebook>
               </a>
               <a
-                href="https://github.com/faisal-devs"
+                href="https://github.com/faisalahammed01"
                 className="btn glass mt-3 text-white uppercase hover:bg-blue-950 rounded-full text-xl font-bold shadow-lg shadow-blue-500 animate-bounce3"
               >
-                <FaGithub />
+                <FaGithub></FaGithub>
               </a>
             </div>
           </div>
