@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import emailjs from "emailjs-com";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { ToastContainer, toast } from "react-toastify"; // import ToastContainer and toast
-import "react-toastify/dist/ReactToastify.css"; // import the css
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const form = useRef();
@@ -19,11 +19,11 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          toast.success("Message sent successfully!"); // Show success toast
+          toast.success("Message sent successfully!");
           form.current.reset();
         },
         (error) => {
-          toast.error("Failed to send message. Try again later."); // Show error toast
+          toast.error("Failed to send message. Try again later.");
         }
       );
   };
