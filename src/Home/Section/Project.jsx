@@ -1,4 +1,3 @@
-import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 const Project = () => {
   return (
@@ -13,7 +12,7 @@ const Project = () => {
           <div className="relative w-full md:justify-center md:flex sm:w-11/12 lg:w-auto">
             <div className="hidden lg:block lg:absolute top-8 left-16 border-8 border-white  w-full h-full rounded-xl"></div>
             <img
-              src="https://i.ibb.co.com/B2FFntV5/Blood-Donation-02-10-2025-08-26-PM.png"
+              src="https://i.ibb.co.com/Y7PYSHDB/Blood-Donation-03-09-2025-04-58-AM.png"
               className="max-w-sm  rounded-lg shadow-2xl w-11/12 lg:w-auto lg:relative"
             />
           </div>
@@ -22,7 +21,7 @@ const Project = () => {
               <h3 className="text-white text-lg font-semibold my-2">
                 🚀 Used Technologies
               </h3>
-              <div className="grid grid-cols-4 gap-2 my-4 text-white text-sm">
+              <div className="grid grid-cols-3  gap-2 my-4 text-white text-sm">
                 <span className="px-3 py-1 bg-gray-700 rounded-lg">
                   React.js
                 </span>
@@ -61,7 +60,7 @@ const Project = () => {
                   tablet, or desktop, the Blood Donation website remains fully
                   functional and visually appealing.
                 </p>
-                <div className="flex justify-center gap-4 mt-4">
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center mt-4">
                   <a
                     href="https://github.com/faisalahammed01/blood-donation-client"
                     className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-500"
@@ -100,7 +99,7 @@ const Project = () => {
               <h3 className="text-white text-lg font-semibold my-2">
                 🚀 Used Technologies
               </h3>
-              <div className="grid grid-cols-4 gap-2 my-4 text-white text-sm">
+              <div className="grid grid-cols-3 gap-2 my-4 text-white text-sm">
                 <span className="px-3 py-1 bg-gray-700 rounded-lg">
                   React.js
                 </span>
@@ -137,7 +136,7 @@ const Project = () => {
                   Whether on mobile, tablet, or desktop, the Lost and Found
                   website remains fully functional and visually appealing.
                 </p>
-                <div className="flex justify-center gap-4 mt-4">
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center mt-4">
                   <a
                     href="https://github.com/faisalahammed01/lost-found-client"
                     className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-500"
@@ -169,7 +168,7 @@ const Project = () => {
           <div className="relative w-full md:justify-center md:flex sm:w-11/12 lg:w-auto">
             <div className="hidden lg:block lg:absolute top-8 right-16 border-8 border-white w-full h-full rounded-xl"></div>
             <img
-              src="https://i.ibb.co.com/rf6fcGB9/lost-and-found.png"
+              src="https://i.ibb.co.com/Zq2WfpX/Home-03-09-2025-05-03-AM.png"
               className="max-w-sm rounded-lg shadow-2xl  w-11/12 lg:w-auto  lg:relative"
             />
           </div>
@@ -190,7 +189,7 @@ const Project = () => {
               <h3 className="text-white text-lg font-semibold my-2">
                 🚀 Used Technologies
               </h3>
-              <div className="grid grid-cols-4 gap-2 my-4 text-white text-sm">
+              <div className="grid grid-cols-3 gap-2 my-4 text-white text-sm">
                 <span className="px-3 py-1 bg-gray-700 rounded-lg">
                   React.js
                 </span>
@@ -224,7 +223,7 @@ const Project = () => {
                   Donation website remains fully functional and visually
                   appealing.
                 </p>
-                <div className="flex justify-center gap-4 mt-4">
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center mt-4">
                   <a
                     href="https://github.com/faisalahammed01/clothing-donation-react"
                     className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-500"

@@ -97,7 +97,10 @@ const Nav = () => {
           <ul className="menu menu-horizontal px-1 text-white gap-6">{link}</ul>
         </div>
         <div className="navbar-end">
-          <a className="text-white font-medium hover:text-gray-300 flex items-center gap-2">
+          <a
+            href="Resume (faisal).pdf"
+            className="text-white font-medium hover:text-gray-300 flex items-center gap-2"
+          >
             RESUME <IoMdDownload></IoMdDownload>
           </a>
         </div>

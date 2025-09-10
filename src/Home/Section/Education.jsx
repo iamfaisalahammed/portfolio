@@ -25,7 +25,7 @@ const Education = () => {
           </h3>
           <p className="text-gray-300 text-center">Feni Computer Institute</p>
           <p className="text-gray-400 text-sm text-center">
-            Currently in 7th Semester (2021 - Present)
+            7th Semester Completed, Internship Ongoing
           </p>
         </div>
       </div>
