@@ -1,3 +1,4 @@
+import AdditionalSkills from "./AdditionalSkills";
 import About from "./Section/About";
 import Banner from "./Section/Banner";
 import Contact from "./Section/Contact";
@@ -21,6 +22,7 @@ const Home = () => {
         <div id="skills">
           <Skills></Skills>
         </div>
+        <AdditionalSkills></AdditionalSkills>
         <div id="education">
           <Education></Education>
         </div>

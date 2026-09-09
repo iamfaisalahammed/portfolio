@@ -1,96 +1,161 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { FaArrowLeft, FaGithub, FaSearch } from "react-icons/fa";
 
 const ProjectThree = () => {
-  const navigate = useNavigate();
-
   return (
-    <div className="max-w-4xl mx-auto px-6 py-10 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-lg shadow-lg">
-      <button
-        onClick={() => navigate("/")}
-        className="mb-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-      >
-        ← Back to Home
-      </button>
+    <section className="min-h-screen bg-[#0b0f14] text-white py-20 px-5">
+      <div className="max-w-5xl mx-auto">
 
-      <h1 className="text-3xl font-bold text-center mb-6">
-        Cloth Donation Web Application
-      </h1>
+        {/* Back Button */}
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-xl
+          bg-white/[0.04] border border-white/10 text-gray-300
+          hover:text-white hover:border-blue-500/30 hover:bg-blue-500/10
+          transition-all duration-300"
+        >
+          <FaArrowLeft />
+          Back to Portfolio
+        </Link>
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold border-b-2 pb-2 mb-4">
-          🚀 Used Technologies
-        </h2>
-        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <li className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
-            💻 <strong>Frontend:</strong> React.js, Tailwind CSS
-          </li>
-          <li className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
-            ⚙️ <strong>Backend:</strong> Express.js, MongoDB
-          </li>
-          <li className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
-            🔒 <strong>Auth:</strong> Firebase
-          </li>
-          <li className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
-            📡 <strong>API Handling:</strong> TanStack Query
-          </li>
-        </ul>
-      </section>
+        {/* Title */}
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          🔍 Lost & Found
+        </h1>
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold border-b-2 pb-2 mb-4">
-          🧥 Project Overview
-        </h2>
-        <p className="leading-relaxed">
-          This application connects donors with people in need, allowing
-          seamless donation of clothes. It includes role-based dashboards,
-          donation tracking, and real-time updates.
+        <p className="text-gray-400 mb-10 text-lg">
+          A web application designed to help users report, search, and recover
+          lost items efficiently through a modern and user-friendly interface.
         </p>
-      </section>
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold border-b-2 pb-2 mb-4">
-          🌟 Key Features
-        </h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>✅ Secure Firebase Authentication</li>
-          <li>✅ Role-based dashboards for Donors & Organizations</li>
-          <li>✅ Advanced search filters</li>
-          <li>✅ Volunteer Management System</li>
-          <li>✅ Dark mode support</li>
-        </ul>
-      </section>
+        {/* Project Image */}
+        <img
+          src="https://i.ibb.co.com/xqRykz7f/lost-and-found.png"
+          alt="Lost and Found"
+          className="rounded-2xl border border-white/10 mb-10 w-full shadow-xl"
+        />
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold border-b-2 pb-2 mb-4">
-          🔗 Live Demo & Code Repositories
-        </h2>
-        <ul className="space-y-2">
-          <li>
-            <strong>Live:</strong>{" "}
-            <a href="#" className="text-blue-500 hover:underline">
-              Your Live Link
-            </a>
-          </li>
-          <li>
-            <strong>Frontend:</strong>{" "}
-            <a href="#" className="text-blue-500 hover:underline">
-              GitHub Repo - Client
-            </a>
-          </li>
-          <li>
-            <strong>Backend:</strong>{" "}
-            <a href="#" className="text-blue-500 hover:underline">
-              GitHub Repo - Server
-            </a>
-          </li>
-        </ul>
-      </section>
+        <div className="space-y-10">
 
-      <p className="text-center text-lg font-medium">
-        👨‍💻 Developed by <strong>Faisal Ahammed</strong>
-      </p>
-    </div>
+          {/* Overview */}
+          <div>
+            <h3 className="text-2xl font-semibold text-blue-400 mb-4">
+              Project Overview
+            </h3>
+
+            <p className="text-gray-400 leading-8">
+              Lost & Found provides a centralized platform where users can post
+              lost items, publish found items, and communicate securely through
+              authenticated accounts. The platform helps increase the chances of
+              recovering lost belongings while maintaining a simple and
+              responsive user experience.
+            </p>
+          </div>
+
+          {/* Features */}
+          <div>
+            <h3 className="text-2xl font-semibold text-blue-400 mb-4">
+              Key Features
+            </h3>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                "Lost Item Reporting System",
+                "Found Item Publishing",
+                "Authentication & Authorization",
+                "CRUD Operations",
+                "Search & Filter Functionality",
+                "Responsive Design",
+              ].map((feature) => (
+                <div
+                  key={feature}
+                  className="p-4 rounded-xl bg-white/[0.03] border border-white/10"
+                >
+                  <span className="text-gray-300">
+                    {feature}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Technologies */}
+          <div>
+            <h3 className="text-2xl font-semibold text-blue-400 mb-4">
+              Technologies
+            </h3>
+
+            <div className="flex flex-wrap gap-3">
+              {[
+                "React",
+                "Tailwind CSS",
+                "Firebase",
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "Framer Motion",
+              ].map((tech) => (
+                <span
+                  key={tech}
+                  className="px-4 py-2 rounded-xl
+                  bg-white/[0.04]
+                  border border-white/10
+                  text-gray-300"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          
+
+          {/* Project Links */}
+          <div>
+            <h3 className="text-2xl font-semibold text-blue-400 mb-4">
+              Project Links
+            </h3>
+
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="https://github.com/iamfaisalahammed/lost-found-client"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-3 rounded-xl bg-white/[0.04]
+                border border-white/10 hover:bg-white/[0.08]
+                transition-all duration-300 flex items-center gap-2"
+              >
+                <FaGithub />
+                Client Repository
+              </a>
+
+              <a
+                href="https://github.com/iamfaisalahammed/lost-and-found-server"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-3 rounded-xl bg-white/[0.04]
+                border border-white/10 hover:bg-white/[0.08]
+                transition-all duration-300 flex items-center gap-2"
+              >
+                <FaGithub />
+                Server Repository
+              </a>
+
+              <a
+                href="https://lost-found-9fc15.web.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-3 rounded-xl bg-blue-500
+                hover:bg-blue-400 transition-all duration-300"
+              >
+                Live Website →
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
   );
 };
 

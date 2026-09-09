@@ -1,5 +1,7 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
+
 import html from "../../Image/icon/HTML.png";
 import css from "../../Image/icon/css.png";
 import javascript from "../../Image/icon/JavaScript.png";
@@ -9,7 +11,8 @@ import firebase from "../../Image/icon/firebase.png";
 import node from "../../Image/icon/node.png";
 import express from "../../Image/icon/express.png";
 import mongo from "../../Image/icon/mongo.png";
-// --tool---
+
+// Tools
 import figma from "../../Image/icon/figma-icon-1024x1024-mvfh9xsk.png";
 import git from "../../Image/icon/git.png";
 import github from "../../Image/icon/github icon.png";
@@ -22,9 +25,9 @@ import Ahrefs from "../../Image/icon/ahref-L2NTFFOU-webp-1020×640--02-10-2025_0
 
 const skillsData = [
   { name: "HTML", img: html, color: "#E44D26" },
-  { name: "CSS", img: css, color: "#0000FF" },
+  { name: "CSS", img: css, color: "#264DE4" },
   { name: "JavaScript", img: javascript, color: "#F7DF1E" },
-  { name: "Tailwind", img: tailwind, color: "#38BDF8" },
+  { name: "Tailwind CSS", img: tailwind, color: "#38BDF8" },
   { name: "React", img: react, color: "#61DAFB" },
   { name: "Firebase", img: firebase, color: "#FFCA28" },
   { name: "Node.js", img: node, color: "#8CC84B" },
@@ -34,7 +37,7 @@ const skillsData = [
 
 const toolsData = [
   { name: "Git", img: git, color: "#F05032" },
-  { name: "GitHub", img: github, color: "#181717" },
+  { name: "GitHub", img: github, color: "#FFFFFF" },
   { name: "VS Code", img: vs, color: "#007ACC" },
   { name: "Figma", img: figma, color: "#F24E1E" },
   { name: "Semrush", img: semrush, color: "#FF6D00" },
@@ -44,115 +47,182 @@ const toolsData = [
   { name: "Vercel", img: vercel, color: "#FFFFFF" },
 ];
 
-const Skills = () => {
-  const [techName, setTechName] = useState("Technology");
-  const [toolName, setToolName] = useState("Tools");
-  const [techColor, setTechColor] = useState("#FFFFFF");
-  const [toolColor, setToolColor] = useState("#FFFFFF");
+const cardVariant = {
+  hidden: {
+    y: 35,
+    opacity: 0,
+  },
+  visible: (index) => ({
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: index * 0.08,
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  }),
+};
 
-  // Variants for animation control
-  const bounceVariant = {
-    hidden: { y: 50, opacity: 0 },
-    visible: (index) => ({
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: index * 0.2,
-        duration: 0.5,
-        type: "spring",
-        stiffness: 100,
-      },
-    }),
-  };
+const Skills = () => {
+  const [techName, setTechName] = useState("Technologies");
+  const [toolName, setToolName] = useState("Development Tools");
+
+  const [techColor, setTechColor] = useState("#60A5FA");
+  const [toolColor, setToolColor] = useState("#60A5FA");
 
   return (
-    <div className="px-4 overflow-hidden">
-      <h1 className="text-3xl font-bold text-center mb-2 text-white">SKILLS</h1>
-      <div className="bg-[#212122] flex flex-col md:flex-row justify-center gap-6 py-4">
-        {/* Technologies */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-xl border border-white/20 glass w-full md:w-1/2"
-        >
-          <p
-            className="text-center text-xl uppercase font-bold mb-8 transition-all"
-            style={{ color: techColor }}
-          >
-            {techName}
+    <section
+      id="skills"
+      className="bg-[#0b0f14] text-white py-20 px-6 lg:px-12 overflow-hidden"
+    >
+      <div className="container mx-auto">
+
+        {/* Section Heading */}
+        <div className="text-center mb-14">
+          <p className="text-blue-400 text-sm font-semibold uppercase tracking-[0.25em] mb-3">
+            My expertise
           </p>
-          <div className="relative">
-            <div className="grid grid-cols-3 gap-4 place-items-center">
+
+          <h2 className="text-4xl sm:text-5xl font-bold">
+            Skills & <span className="text-blue-500">Tools</span>
+          </h2>
+
+          <div className="w-16 h-1 bg-blue-500 rounded-full mx-auto mt-5"></div>
+
+          <p className="text-gray-400 max-w-2xl mx-auto mt-5 leading-7">
+            Technologies and tools I use to build modern, responsive,
+            and scalable web applications.
+          </p>
+        </div>
+
+        {/* Skill Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-7">
+
+          {/* Technologies */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="bg-white/[0.03] border border-gray-800 rounded-2xl p-6 sm:p-8 hover:border-blue-500/40 transition duration-300"
+          >
+            {/* Card Header */}
+            <div className="flex items-center justify-between mb-8">
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-widest">
+                  Technologies
+                </p>
+
+                <h3
+                  className="text-2xl font-bold mt-1 transition-colors duration-300"
+                  style={{ color: techColor }}
+                >
+                  {techName}
+                </h3>
+              </div>
+
+              <div className="w-11 h-11 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+                <span className="text-blue-400 font-bold text-lg">
+                  01
+                </span>
+              </div>
+            </div>
+
+            {/* Technologies Grid */}
+            <div className="grid grid-cols-3 gap-4">
               {skillsData.map((skill, index) => (
                 <motion.div
-                  key={index}
-                  className="group relative"
+                  key={skill.name}
                   custom={index}
-                  variants={bounceVariant}
+                  variants={cardVariant}
+                  className="group flex flex-col items-center justify-center min-h-[105px] rounded-xl border border-gray-800 bg-[#11161d] hover:border-gray-600 hover:bg-white/[0.05] transition-all duration-300 cursor-pointer"
                   onMouseEnter={() => {
                     setTechName(skill.name);
                     setTechColor(skill.color);
                   }}
                   onMouseLeave={() => {
-                    setTechName("Technology");
-                    setTechColor("#FFFFFF");
+                    setTechName("Technologies");
+                    setTechColor("#60A5FA");
                   }}
                 >
                   <img
-                    className="size-12 transition-all"
                     src={skill.img}
                     alt={skill.name}
+                    className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300"
                   />
+
+                  <span className="text-xs text-gray-500 group-hover:text-gray-300 mt-3 transition-colors">
+                    {skill.name}
+                  </span>
                 </motion.div>
               ))}
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
 
-        {/* Tools */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-xl border border-white/20 glass w-full md:w-1/2"
-        >
-          <p
-            className="text-center text-xl uppercase font-bold mb-8 transition-all"
-            style={{ color: toolColor }}
+          {/* Tools */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="bg-white/[0.03] border border-gray-800 rounded-2xl p-6 sm:p-8 hover:border-blue-500/40 transition duration-300"
           >
-            {toolName}
-          </p>
-          <div className="relative">
-            <div className="grid grid-cols-3 gap-4 place-items-center">
+            {/* Card Header */}
+            <div className="flex items-center justify-between mb-8">
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-widest">
+                  Tools
+                </p>
+
+                <h3
+                  className="text-2xl font-bold mt-1 transition-colors duration-300"
+                  style={{ color: toolColor }}
+                >
+                  {toolName}
+                </h3>
+              </div>
+
+              <div className="w-11 h-11 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+                <span className="text-blue-400 font-bold text-lg">
+                  02
+                </span>
+              </div>
+            </div>
+
+            {/* Tools Grid */}
+            <div className="grid grid-cols-3 gap-4">
               {toolsData.map((tool, index) => (
                 <motion.div
-                  key={index}
-                  className="group relative"
+                  key={tool.name}
                   custom={index}
-                  variants={bounceVariant}
+                  variants={cardVariant}
+                  className="group flex flex-col items-center justify-center min-h-[105px] rounded-xl border border-gray-800 bg-[#11161d] hover:border-gray-600 hover:bg-white/[0.05] transition-all duration-300 cursor-pointer"
                   onMouseEnter={() => {
                     setToolName(tool.name);
                     setToolColor(tool.color);
                   }}
                   onMouseLeave={() => {
-                    setToolName("Tools");
-                    setToolColor("#FFFFFF");
+                    setToolName("Development Tools");
+                    setToolColor("#60A5FA");
                   }}
                 >
                   <img
-                    className="size-12 transition-all"
                     src={tool.img}
                     alt={tool.name}
+                    className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300"
                   />
+
+                  <span className="text-xs text-gray-500 group-hover:text-gray-300 mt-3 transition-colors">
+                    {tool.name}
+                  </span>
                 </motion.div>
               ))}
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default Skills;
+

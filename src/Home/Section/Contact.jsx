@@ -1,112 +1,238 @@
-import { useRef } from "react";
+
+import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaPaperPlane,
+} from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const form = useRef();
+  const [isSending, setIsSending] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSending(true);
 
     emailjs
       .sendForm(
-        "service_fp284b6", // Replace with your EmailJS Service ID
-        "template_6eok0mr", // Replace with your EmailJS Template ID
+        "service_fp284b6",
+        "template_6eok0mr",
         form.current,
-        "tfhng-JnJ5_qnRMZy" // Replace with your EmailJS Public Key
+        "tfhng-JnJ5_qnRMZy"
       )
-      .then(
-        (result) => {
-          toast.success("Message sent successfully!");
-          form.current.reset();
-        },
-        (error) => {
-          toast.error("Failed to send message. Try again later.");
-        }
-      );
+      .then(() => {
+        toast.success("Message sent successfully!");
+        form.current.reset();
+        setIsSending(false);
+      })
+      .catch(() => {
+        toast.error("Failed to send message. Try again later.");
+        setIsSending(false);
+      });
   };
 
   return (
-    <section className="bg-[#121212] py-6 text-white">
-      <h1 className="text-3xl font-bold text-center pb-9 text-white">
-        CONTACT
-      </h1>
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Left Section - Contact Info */}
-          <div className="bg-white/10 p-8 rounded-2xl shadow-xl backdrop-blur-lg border border-white/20">
-            <h3 className="text-2xl font-semibold mb-4">Get in Touch</h3>
-            <p className="text-gray-300 mb-6">
-              Have questions or want to work together? Send me a message!
-            </p>
+    <section
+      id="contact"
+      className="bg-[#0b0f14] text-white py-20 px-6 lg:px-12"
+    >
+      <div className="container mx-auto">
 
-            <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="bg-white/20 p-4 rounded-xl shadow-md backdrop-blur-sm">
-                  <FaPhoneAlt className="text-blue-400 text-xl"></FaPhoneAlt>
+        {/* Section Heading */}
+        <div className="text-center mb-14">
+          <p className="text-blue-400 text-sm font-semibold uppercase tracking-[0.25em] mb-3">
+            Let's work together
+          </p>
+
+          <h2 className="text-4xl sm:text-5xl font-bold">
+            Get In <span className="text-blue-500">Touch</span>
+          </h2>
+
+          <div className="w-16 h-1 bg-blue-500 rounded-full mx-auto mt-5"></div>
+
+          <p className="text-gray-400 max-w-2xl mx-auto mt-5 leading-7">
+            Have a project in mind or want to discuss an opportunity?
+            Feel free to send me a message.
+          </p>
+        </div>
+
+        {/* Contact Content */}
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+          {/* Contact Information */}
+          <div className="bg-white/[0.03] border border-gray-800 rounded-2xl p-7 sm:p-9">
+
+            <div className="mb-8">
+              <p className="text-blue-400 text-sm uppercase tracking-widest font-semibold mb-2">
+                Contact information
+              </p>
+
+              <h3 className="text-2xl sm:text-3xl font-bold">
+                Let's start a conversation
+              </h3>
+
+              <p className="text-gray-400 mt-4 leading-7">
+                I'm always open to discussing new projects, creative ideas,
+                or opportunities to be part of your vision.
+              </p>
+            </div>
+
+            {/* Contact Items */}
+            <div className="space-y-5">
+
+              {/* Phone */}
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-[#11161d] border border-gray-800 hover:border-blue-500/40 transition duration-300">
+                <div className="w-12 h-12 shrink-0 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+                  <FaPhoneAlt className="text-blue-400 text-lg" />
                 </div>
-                <span className="text-sm lg:text-lg">+8801820037321</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="bg-white/20 p-4 rounded-xl shadow-md backdrop-blur-sm">
-                  <FaEnvelope className="text-blue-400 text-xl"></FaEnvelope>
+
+                <div>
+                  <p className="text-xs text-gray-500 uppercase tracking-wider">
+                    Phone
+                  </p>
+                  <p className="text-gray-200 mt-1">
+                    +8801820037321
+                  </p>
                 </div>
-                <span className="text-sm lg:text-lg">
-                  faisalahammed003@gmail.com
-                </span>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="bg-white/20 p-4 rounded-xl shadow-md backdrop-blur-sm">
-                  <FaMapMarkerAlt className="text-blue-400 text-xl"></FaMapMarkerAlt>
+
+              {/* Email */}
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-[#11161d] border border-gray-800 hover:border-blue-500/40 transition duration-300">
+                <div className="w-12 h-12 shrink-0 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+                  <FaEnvelope className="text-blue-400 text-lg" />
                 </div>
-                <span className="text-sm lg:text-lg">
-                  Chittagong, Bangladesh
-                </span>
+
+                <div className="min-w-0">
+                  <p className="text-xs text-gray-500 uppercase tracking-wider">
+                    Email
+                  </p>
+                  <p className="text-gray-200 mt-1 break-all">
+                    faisalahammed003@gmail.com
+                  </p>
+                </div>
               </div>
+
+              {/* Location */}
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-[#11161d] border border-gray-800 hover:border-blue-500/40 transition duration-300">
+                <div className="w-12 h-12 shrink-0 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+                  <FaMapMarkerAlt className="text-blue-400 text-lg" />
+                </div>
+
+                <div>
+                  <p className="text-xs text-gray-500 uppercase tracking-wider">
+                    Location
+                  </p>
+                  <p className="text-gray-200 mt-1">
+                    Chittagong, Bangladesh
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          {/* Right Section - Contact Form */}
-          <div className="bg-white/10 p-8 rounded-2xl shadow-xl backdrop-blur-lg border border-white/20">
-            <form ref={form} onSubmit={sendEmail} className="space-y-6">
-              <input
-                type="text"
-                name="from_name"
-                placeholder="Your Name"
-                className="w-full px-4 py-3 bg-black/50 text-white rounded-xl border border-white/10 focus:ring-2 focus:ring-blue-500 outline-none placeholder-gray-400"
-                required
-              />
-              <input
-                type="email"
-                name="from_email"
-                placeholder="Your Email"
-                className="w-full px-4 py-3 bg-black/50 text-white rounded-xl border border-white/10 focus:ring-2 focus:ring-blue-500 outline-none placeholder-gray-400"
-                required
-              />
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                rows="4"
-                className="w-full px-4 py-3 bg-black/50 text-white rounded-xl border border-white/10 focus:ring-2 focus:ring-blue-500 outline-none placeholder-gray-400"
-                required
-              ></textarea>
+          {/* Contact Form */}
+          <div className="bg-white/[0.03] border border-gray-800 rounded-2xl p-7 sm:p-9">
+
+            <div className="mb-7">
+              <p className="text-blue-400 text-sm uppercase tracking-widest font-semibold mb-2">
+                Send a message
+              </p>
+
+              <h3 className="text-2xl font-bold">
+                Tell me about your project
+              </h3>
+            </div>
+
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="space-y-5"
+            >
+
+              {/* Name */}
+              <div>
+                <label className="block text-sm text-gray-400 mb-2">
+                  Your Name
+                </label>
+
+                <input
+                  type="text"
+                  name="from_name"
+                  placeholder="Enter your name"
+                  className="w-full px-4 py-3.5 bg-[#11161d] text-white rounded-xl border border-gray-800 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none placeholder-gray-600 transition duration-300"
+                  required
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <label className="block text-sm text-gray-400 mb-2">
+                  Your Email
+                </label>
+
+                <input
+                  type="email"
+                  name="from_email"
+                  placeholder="Enter your email"
+                  className="w-full px-4 py-3.5 bg-[#11161d] text-white rounded-xl border border-gray-800 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none placeholder-gray-600 transition duration-300"
+                  required
+                />
+              </div>
+
+              {/* Message */}
+              <div>
+                <label className="block text-sm text-gray-400 mb-2">
+                  Your Message
+                </label>
+
+                <textarea
+                  name="message"
+                  rows="5"
+                  placeholder="Write your message..."
+                  className="w-full px-4 py-3.5 bg-[#11161d] text-white rounded-xl border border-gray-800 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none placeholder-gray-600 resize-none transition duration-300"
+                  required
+                ></textarea>
+              </div>
+
+              {/* Submit */}
               <button
                 type="submit"
-                className="w-full py-3 bg-blue-500 text-white rounded-xl text-lg font-semibold hover:bg-blue-600 transition duration-300"
+                disabled={isSending}
+                className="w-full flex items-center justify-center gap-2 py-3.5 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed text-white rounded-xl font-semibold transition duration-300 shadow-lg shadow-blue-600/10"
               >
-                Send Message
+                {isSending ? (
+                  <>
+                    <span className="loading loading-spinner loading-sm"></span>
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    Send Message
+                    <FaPaperPlane className="text-sm" />
+                  </>
+                )}
               </button>
+
             </form>
           </div>
         </div>
       </div>
 
-      {/* Toast Container to display messages */}
-      <ToastContainer></ToastContainer>
+      {/* Toast */}
+      <ToastContainer
+        position="bottom-right"
+        autoClose={3000}
+        theme="dark"
+      />
     </section>
   );
 };
 
 export default Contact;
+

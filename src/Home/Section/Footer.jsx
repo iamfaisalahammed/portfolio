@@ -1,40 +1,84 @@
+
 import { FaX } from "react-icons/fa6";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
+
 const Footer = () => {
   return (
-    <footer className="footer bg- text-neutral-content items-center p-4 bg-[#212122] backdrop-blur-md border-t border-white/20">
-      <aside className="grid-flow-col items-center">
-        <p className="text-xl">© {new Date().getFullYear()} - Faisal Ahammed</p>
-      </aside>
-      <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-        <a
-          href="https://www.facebook.com/faisalahammed00"
-          className="bg-white/20 p-4 rounded-xl shadow-md backdrop-blur-sm animate-pulse"
-        >
-          <a className="">
-            <FaFacebook className="text-blue-400 hover:text-white  text-xl"></FaFacebook>
-          </a>
-        </a>
-        <a
-          href="https://x.com/faisalahammed02"
-          className="bg-white/20   p-4 rounded-xl shadow-md backdrop-blur-sm  animate-pulse"
-        >
-          <a>
-            <FaX className="text-blue-400 text-xl hover:text-white"></FaX>
-          </a>
-        </a>
+    <footer className="bg-[#0b0f14] border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-5 py-7 flex flex-col md:flex-row items-center justify-between gap-5">
+        
+        {/* Copyright */}
+        <div className="text-center md:text-left">
+          <p className="text-sm sm:text-base text-gray-400">
+            © {new Date().getFullYear()}{" "}
+            <span className="text-white font-semibold">
+              Faisal Ahammed
+            </span>
+            . All rights reserved.
+          </p>
+        </div>
 
-        <a
-          href="https://www.linkedin.com/in/faisalahammed/"
-          className="bg-white/20 p-4 rounded-xl shadow-md backdrop-blur-sm animate-pulse"
-        >
-          <a>
-            <FaLinkedin className="text-blue-400 hover:text-white text-xl"></FaLinkedin>
+        {/* Social Links */}
+        <nav className="flex items-center gap-3">
+          {/* Facebook */}
+          <a
+            href="https://www.facebook.com/iamfaisalahammed"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="w-11 h-11 flex items-center justify-center rounded-xl
+                       bg-white/[0.04] border border-white/10
+                       text-gray-400
+                       hover:text-blue-400 hover:border-blue-500/40
+                       hover:bg-blue-500/10
+                       transition-all duration-300"
+          >
+            <FaFacebook className="text-xl" />
           </a>
-        </a>
-      </nav>
+
+          {/* X */}
+          <a
+            href="https://x.com/faisalAhammed_"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X"
+            className="w-11 h-11 flex items-center justify-center rounded-xl
+                       bg-white/[0.04] border border-white/10
+                       text-gray-400
+                       hover:text-white hover:border-white/30
+                       hover:bg-white/10
+                       transition-all duration-300"
+          >
+            <FaX className="text-lg" />
+          </a>
+
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/faisalahammed/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="w-11 h-11 flex items-center justify-center rounded-xl
+                       bg-white/[0.04] border border-white/10
+                       text-gray-400
+                       hover:text-blue-400 hover:border-blue-500/40
+                       hover:bg-blue-500/10
+                       transition-all duration-300"
+          >
+            <FaLinkedin className="text-xl" />
+          </a>
+        </nav>
+      </div>
+
+      {/* Bottom Line */}
+      <div className="border-t border-white/5">
+        <p className="text-center text-xs text-gray-600 py-4">
+          Crafted with React by Faisal Ahammed
+        </p>
+      </div>
     </footer>
   );
 };
 
 export default Footer;
+

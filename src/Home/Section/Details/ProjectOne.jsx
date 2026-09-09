@@ -1,240 +1,219 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa6";
 
 const ProjectOne = () => {
-  const navigate = useNavigate();
-
   return (
-    <div className="bg-gray-50 text-gray-800 p-6 md:p-12">
-      <div className="container mx-auto">
-        <button
-          onClick={() => navigate("/")}
-          className="bg-blue-500 text-white px-4 py-2 rounded-md mb-6 hover:bg-blue-600 transition-all"
+    <section className="min-h-screen bg-[#0b0f14] text-white py-20 px-5">
+      <div className="max-w-6xl mx-auto">
+           {/* Back Button */}
+        <Link
+          to="/"
+          className="inline-flex items-center gap-3 mb-10 px-5 py-3
+                     rounded-xl border border-white/10
+                     bg-white/[0.03]
+                     text-gray-300 font-medium
+                     hover:text-blue-400
+                     hover:border-blue-500/30
+                     hover:bg-blue-500/[0.05]
+                     transition-all duration-300"
         >
-          Back to Home
-        </button>
+          <FaArrowLeft />
+          <span>Back to Projects</span>
+        </Link>
 
-        <h1 className="text-4xl font-bold text-center mb-6">
-          Blood Donation Web Application
-        </h1>
+        {/* Project Header */}
+        <div className="mb-12">
+          <p className="text-blue-400 uppercase tracking-[0.2em] text-sm font-semibold mb-3">
+            Featured Project
+          </p>
 
-        <h2 className="text-2xl font-semibold mb-4">🚀 Used Technologies</h2>
-        <ul className="space-y-2">
-          <li>
-            <strong>Frontend:</strong> React.js, Tailwind CSS
-          </li>
-          <li>
-            <strong>Backend:</strong> Express.js, MongoDB
-          </li>
-          <li>
-            <strong>Authentication & Security:</strong> Firebase, JWT
-          </li>
-          <li>
-            <strong>State Management & API Handling:</strong> TanStack Query
-          </li>
-          <li>
-            <strong>Payment Integration:</strong> Stripe
-          </li>
-        </ul>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            📦 GoParcel
+          </h1>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-4">
-          🩸 Project Overview
-        </h2>
-        <p className="text-lg leading-relaxed">
-          The <strong>Blood Donation Web Application</strong> is a comprehensive
-          platform designed to streamline the blood donation process. This
-          project provides an intuitive interface for{" "}
-          <strong>donors, volunteers, and administrators</strong> to interact
-          efficiently. It simplifies blood donation requests, donor management,
-          and user accessibility while ensuring a{" "}
-          <strong>seamless, secure, and mobile-friendly experience</strong>.
-        </p>
-
-        <h3 className="text-xl font-semibold mt-8">🌟 Key Features</h3>
-
-        <div className="space-y-4">
-          <h4 className="font-semibold">
-            ✅ User Authentication & Role-Based Access Control
-          </h4>
-          <ul className="list-inside list-disc pl-4">
-            <li>
-              Secure <strong>Firebase Authentication</strong> (Google, Email &
-              Password login)
-            </li>
-            <li>
-              <strong>JWT token-based authentication</strong> for private APIs
-            </li>
-            <li>
-              <strong>Different dashboards</strong> for Admins, Donors, and
-              Volunteers
-            </li>
-          </ul>
-
-          <h4 className="font-semibold">✅ Blood Donation Management</h4>
-          <ul className="list-inside list-disc pl-4">
-            <li>
-              <strong>Donors</strong> can register and update their donation
-              status
-            </li>
-            <li>
-              Users can make <strong>real-time blood requests</strong>
-            </li>
-            <li>
-              Advanced <strong>donor search filters</strong> based on location,
-              blood group, and availability
-            </li>
-          </ul>
-
-          <h4 className="font-semibold">✅ Admin Dashboard</h4>
-          <ul className="list-inside list-disc pl-4">
-            <li>
-              Manage <strong>donors, requests, and volunteers</strong>
-            </li>
-            <li>
-              Oversee <strong>fundraising and content updates</strong>
-            </li>
-            <li>Generate reports and insights for better decision-making</li>
-          </ul>
-
-          <h4 className="font-semibold">✅ Volunteer System</h4>
-          <ul className="list-inside list-disc pl-4">
-            <li>Volunteers can sign up and help manage donation requests</li>
-            <li>Notifications for new donation opportunities</li>
-          </ul>
-
-          <h4 className="font-semibold">✅ Payment & Funding System</h4>
-          <ul className="list-inside list-disc pl-4">
-            <li>
-              <strong>Stripe integration</strong> for seamless donations
-            </li>
-            <li>Secure payment processing for funding blood donation drives</li>
-          </ul>
-
-          <h4 className="font-semibold">✅ Fully Responsive Design</h4>
-          <ul className="list-inside list-disc pl-4">
-            <li>
-              <strong>Optimized for mobile, tablet, and desktop</strong>
-            </li>
-            <li>Ensures smooth navigation and usability across all devices</li>
-          </ul>
-
-          <h4 className="font-semibold">✅ Additional Functionalities</h4>
-          <ul className="list-inside list-disc pl-4">
-            <li>
-              <strong>SEO-friendly</strong> with meta tags for better search
-              rankings
-            </li>
-            <li>
-              <strong>Dark mode support</strong> for enhanced user experience
-            </li>
-            <li>
-              <strong>Fast performance</strong> with optimized API handling
-              using <strong>TanStack Query</strong>
-            </li>
-          </ul>
+          <p className="text-gray-400 max-w-3xl leading-7">
+            A full-stack parcel delivery management platform built with the
+            MERN Stack. Users can create parcel bookings, track deliveries,
+            make payments, and manage orders through dedicated dashboards.
+          </p>
         </div>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-4">
-          🛠 Tech Stack Justification
-        </h2>
-        <ul className="space-y-2">
-          <li>
-            <strong>React.js & Tailwind CSS</strong> → For a dynamic, modern,
-            and responsive UI
-          </li>
-          <li>
-            <strong>MongoDB & Express.js</strong> → Efficient database and
-            server management
-          </li>
-          <li>
-            <strong>JWT & Firebase</strong> → Secure authentication and role
-            management
-          </li>
-          <li>
-            <strong>TanStack Query</strong> → Optimized state management and API
-            caching
-          </li>
-          <li>
-            <strong>Stripe</strong> → Secure payment and donation handling
-          </li>
-        </ul>
+        {/* Project Image */}
+        <div className="mb-14">
+          <img
+            src="https://i.ibb.co.com/8gN2XcKF/bf20c52a-a9a2-48d5-afc7-b31ae9a8ea2c.png"
+            alt="GoParcel"
+            className="w-full rounded-3xl border border-white/10 shadow-2xl"
+          />
+        </div>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-4">
-          🔗 Live Demo & Code Repositories
-        </h2>
-        <ul className="space-y-2">
-          <li>
-            <strong>Live Website:</strong>{" "}
-            <a
-              href="[Your Live Link]"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
-            >
-              Your Live Link
-            </a>
-          </li>
-          <li>
-            <strong>Frontend Code:</strong>{" "}
-            <a
-              href="[GitHub Repo - Client]"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
-            >
-              GitHub Repo - Client
-            </a>
-          </li>
-          <li>
-            <strong>Backend Code:</strong>{" "}
-            <a
-              href="[GitHub Repo - Server]"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
-            >
-              GitHub Repo - Server
-            </a>
-          </li>
-        </ul>
+        <div className="space-y-14">
 
-        <h2 className="text-2xl font-semibold mt-8 mb-4">
-          📌 Future Enhancements
-        </h2>
-        <ul className="space-y-2">
-          <li>
-            Implement a <strong>chat system</strong> for donor-recipient
-            communication
-          </li>
-          <li>
-            Add <strong>AI-based donor matching</strong> for quicker blood
-            request processing
-          </li>
-          <li>
-            Introduce <strong>automated reminders</strong> for eligible donors
-          </li>
-          <li>
-            Expand <strong>multilingual support</strong> for wider accessibility
-          </li>
-        </ul>
+          {/* Overview */}
+          <div>
+            <h2 className="text-2xl font-semibold text-blue-400 mb-5">
+              Project Overview
+            </h2>
 
-        <h3 className="text-2xl font-semibold mt-8">🚀 Conclusion</h3>
-        <p className="text-lg leading-relaxed mt-4">
-          The <strong>Blood Donation Web Application</strong> is a powerful and
-          user-friendly platform that revolutionizes the blood donation process.
-          With a focus on security, accessibility, and seamless user experience,
-          this project is a step toward{" "}
-          <strong>
-            making blood donation easier and more efficient for everyone
-          </strong>
-          .
-        </p>
+            <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-6">
+              <p className="text-gray-400 leading-8">
+                GoParcel is a modern parcel delivery platform designed to
+                simplify courier operations. The application supports users,
+                riders, and administrators through dedicated dashboards,
+                parcel tracking, payment processing, and delivery management
+                workflows.
+              </p>
+            </div>
+          </div>
 
-        <p className="text-center mt-8">
-          👨‍💻 Developed by <strong>Faisal Ahammed</strong>
-        </p>
+          {/* Features */}
+          <div>
+            <h2 className="text-2xl font-semibold text-blue-400 mb-5">
+              Key Features
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                "Parcel Booking & Management",
+                "Real-time Parcel Tracking",
+                "Rider Assignment Workflow",
+                "Stripe Payment Integration",
+                "Role-based Dashboard",
+                "Admin Analytics & Reports",
+              ].map((feature) => (
+                <div
+                  key={feature}
+                  className="bg-white/[0.03] border border-white/10 rounded-xl p-4 hover:border-blue-500/30 transition-all duration-300"
+                >
+                  <p className="text-gray-300">{feature}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Technologies */}
+          <div>
+            <h2 className="text-2xl font-semibold text-blue-400 mb-5">
+              Technologies Used
+            </h2>
+
+            <div className="flex flex-wrap gap-3">
+              {[
+                "React",
+                "Tailwind CSS",
+                "Firebase",
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "Stripe",
+                "JWT",
+                "TanStack Query",
+              ].map((tech) => (
+                <span
+                  key={tech}
+                  className="px-4 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-gray-300"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Demo Credentials */}
+          <div>
+            <h2 className="text-2xl font-semibold text-blue-400 mb-5">
+              Demo Credentials
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-5">
+
+              {/* Admin */}
+              <div className="rounded-2xl border border-blue-500/20 bg-blue-500/[0.05] p-6">
+                <h3 className="text-blue-400 font-semibold text-lg mb-4">
+                  Admin Account
+                </h3>
+
+                <div className="space-y-2 text-gray-300">
+                  <p>
+                    <span className="text-gray-500">Email:</span>{" "}
+                    admin@gmail.com
+                  </p>
+
+                  <p>
+                    <span className="text-gray-500">Password:</span>{" "}
+                    12345678
+                  </p>
+                </div>
+              </div>
+
+              {/* Rider */}
+              <div className="rounded-2xl border border-purple-500/20 bg-purple-500/[0.05] p-6">
+                <h3 className="text-purple-400 font-semibold text-lg mb-4">
+                  Rider Account
+                </h3>
+
+                <div className="space-y-2 text-gray-300">
+                  <p>
+                    <span className="text-gray-500">Email:</span>{" "}
+                    rider@gmail.com
+                  </p>
+
+                  <p>
+                    <span className="text-gray-500">Password:</span>{" "}
+                    12345678
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Stripe Cards */}
+          <div>
+            <h2 className="text-2xl font-semibold text-blue-400 mb-5">
+              Stripe Test Cards
+            </h2>
+
+            <div className="overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.03]">
+              <table className="table">
+                <thead>
+                  <tr className="text-blue-400">
+                    <th>Card Type</th>
+                    <th>Card Number</th>
+                    <th>CVC</th>
+                    <th>Expiry Date</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Visa</td>
+                    <td>4242 4242 4242 4242</td>
+                    <td>Any 3 digits</td>
+                    <td>Any future date</td>
+                  </tr>
+
+                  <tr>
+                    <td>Mastercard</td>
+                    <td>5555 5555 5555 4444</td>
+                    <td>Any 3 digits</td>
+                    <td>Any future date</td>
+                  </tr>
+
+                  <tr>
+                    <td>American Express</td>
+                    <td>3782 822463 10005</td>
+                    <td>Any 4 digits</td>
+                    <td>Any future date</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
