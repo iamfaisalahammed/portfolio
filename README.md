@@ -10,9 +10,6 @@ Welcome to my portfolio. I am a passionate **MERN Stack Developer** who enjoys b
 
 * **Name:** Faisal Ahammed
 * **Role:** Web Developer | MERN Stack Developer
-* **Education:** Diploma in Telecommunication Engineering, Feni Computer Institute
-* **Graduated:** 2026
-* **Focus:** Frontend Development | Full-Stack Development
 
 ---
 
@@ -32,6 +29,4 @@ Welcome to my portfolio. I am a passionate **MERN Stack Developer** who enjoys b
 * **LinkedIn:** https://www.linkedin.com/in/faisalahammed/
 * **GitHub:**   https://github.com/iamfaisalahammed
 
----
 
-Feel free to explore my projects and get in touch for collaboration or opportunities.

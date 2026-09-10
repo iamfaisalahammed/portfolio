@@ -1,6 +1,6 @@
 
 import { FaGithub, FaLinkedin, FaX } from "react-icons/fa6";
-import img from "../../Image/Ahammed.jpg";
+import img from "../../Image/faisal.png";
 
 const About = () => {
   return (
@@ -116,7 +116,7 @@ const About = () => {
               </a>
 
               <a
-                href="https://x.com/faisalahammed02"
+                href="https://x.com/faisalahammed_"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="X"
@@ -126,7 +126,7 @@ const About = () => {
               </a>
 
               <a
-                href="https://github.com/faisalahammed01"
+                href="https://github.com/iamfaisalahammed"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="GitHub"

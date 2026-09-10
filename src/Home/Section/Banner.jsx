@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import img from "../../Image/faisal-ahammed.jpg";
+import img from "../../Image/Profile.png";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const AnimatedText = () => {
@@ -82,7 +82,7 @@ const Banner = () => {
             {/* Buttons */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-8">
               <a
-                href="#projects"
+                href="#project"
                 className="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold transition duration-300 shadow-lg shadow-blue-600/20"
               >
                 View My Work

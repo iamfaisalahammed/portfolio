@@ -1,4 +1,3 @@
-
 import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import {
@@ -20,18 +19,20 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_fp284b6",
+        "service_nqy9xxr",
         "template_6eok0mr",
         form.current,
-        "tfhng-JnJ5_qnRMZy"
+        "BWNW8N-7BArcbiYQl",
       )
       .then(() => {
         toast.success("Message sent successfully!");
         form.current.reset();
         setIsSending(false);
       })
-      .catch(() => {
-        toast.error("Failed to send message. Try again later.");
+      .catch((error) => {
+        console.log("EMAILJS ERROR:", error);
+
+        toast.error(error.text || "Failed to send message");
         setIsSending(false);
       });
   };
@@ -42,7 +43,6 @@ const Contact = () => {
       className="bg-[#0b0f14] text-white py-20 px-6 lg:px-12"
     >
       <div className="container mx-auto">
-
         {/* Section Heading */}
         <div className="text-center mb-14">
           <p className="text-blue-400 text-sm font-semibold uppercase tracking-[0.25em] mb-3">
@@ -56,17 +56,14 @@ const Contact = () => {
           <div className="w-16 h-1 bg-blue-500 rounded-full mx-auto mt-5"></div>
 
           <p className="text-gray-400 max-w-2xl mx-auto mt-5 leading-7">
-            Have a project in mind or want to discuss an opportunity?
-            Feel free to send me a message.
+            Whether it's a project, collaboration, or a new opportunity, feel free to reach out.
           </p>
         </div>
 
         {/* Contact Content */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-
           {/* Contact Information */}
           <div className="bg-white/[0.03] border border-gray-800 rounded-2xl p-7 sm:p-9">
-
             <div className="mb-8">
               <p className="text-blue-400 text-sm uppercase tracking-widest font-semibold mb-2">
                 Contact information
@@ -77,14 +74,12 @@ const Contact = () => {
               </h3>
 
               <p className="text-gray-400 mt-4 leading-7">
-                I'm always open to discussing new projects, creative ideas,
-                or opportunities to be part of your vision.
+              I'm always open to discussing new projects, creative ideas, and opportunities to build impactful digital solutions together.
               </p>
             </div>
 
             {/* Contact Items */}
             <div className="space-y-5">
-
               {/* Phone */}
               <div className="flex items-center gap-4 p-4 rounded-xl bg-[#11161d] border border-gray-800 hover:border-blue-500/40 transition duration-300">
                 <div className="w-12 h-12 shrink-0 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
@@ -95,9 +90,7 @@ const Contact = () => {
                   <p className="text-xs text-gray-500 uppercase tracking-wider">
                     Phone
                   </p>
-                  <p className="text-gray-200 mt-1">
-                    +8801820037321
-                  </p>
+                  <p className="text-gray-200 mt-1">+8801820037321</p>
                 </div>
               </div>
 
@@ -127,34 +120,23 @@ const Contact = () => {
                   <p className="text-xs text-gray-500 uppercase tracking-wider">
                     Location
                   </p>
-                  <p className="text-gray-200 mt-1">
-                    Chittagong, Bangladesh
-                  </p>
+                  <p className="text-gray-200 mt-1">Chittagong, Bangladesh</p>
                 </div>
               </div>
-
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="bg-white/[0.03] border border-gray-800 rounded-2xl p-7 sm:p-9">
-
             <div className="mb-7">
               <p className="text-blue-400 text-sm uppercase tracking-widest font-semibold mb-2">
                 Send a message
               </p>
 
-              <h3 className="text-2xl font-bold">
-                Tell me about your project
-              </h3>
+              <h3 className="text-2xl font-bold">Let's Discuss Opportunities</h3>
             </div>
 
-            <form
-              ref={form}
-              onSubmit={sendEmail}
-              className="space-y-5"
-            >
-
+            <form ref={form} onSubmit={sendEmail} className="space-y-5">
               {/* Name */}
               <div>
                 <label className="block text-sm text-gray-400 mb-2">
@@ -218,21 +200,15 @@ const Contact = () => {
                   </>
                 )}
               </button>
-
             </form>
           </div>
         </div>
       </div>
 
       {/* Toast */}
-      <ToastContainer
-        position="bottom-right"
-        autoClose={3000}
-        theme="dark"
-      />
+      <ToastContainer position="bottom-right" autoClose={3000} theme="dark" />
     </section>
   );
 };
 
 export default Contact;
-

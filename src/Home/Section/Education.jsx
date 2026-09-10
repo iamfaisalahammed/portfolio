@@ -32,8 +32,8 @@ const Education = () => {
           <div className="relative flex items-start gap-6 sm:gap-0 mb-12">
 
             {/* Icon */}
-            <div className="relative z-10 shrink-0 w-10 h-10 rounded-full bg-blue-600 border-4 border-[#0b0f14] flex items-center justify-center shadow-lg shadow-blue-500/20 sm:absolute sm:left-1/2 sm:-translate-x-1/2">
-              <FaGraduationCap className="text-white text-sm" />
+            <div className="relative z-10 shrink-0 w-10 h-10 rounded-full  bg-blue-600 border-4 border-[#0b0f14] flex items-center justify-center shadow-lg shadow-blue-500/20 sm:absolute sm:left-1/2 sm:-translate-x-1/2">
+              <FaGraduationCap className="text-white text-sm " />
             </div>
 
             {/* Card */}
