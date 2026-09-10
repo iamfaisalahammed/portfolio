@@ -1,20 +1,37 @@
-# 🌐 Faisal Ahammed - Web Developer
+# Faisal Ahammed - Web Developer
 
-Welcome to my portfolio! I am a passionate **MERN Stack Developer** with a strong enthusiasm for learning new technologies and building modern web applications.
+Welcome to my portfolio. I am a passionate **MERN Stack Developer** who enjoys building modern, responsive, and user-friendly web applications. I am always interested in learning new technologies and improving my development skills.
 
-🔗Portfolio Live Link: https://faisal-ahammed.vercel.app/
+**Portfolio:** https://faisal-ahammed.vercel.app/
 
-## 🚀 About Me
+---
 
-- 🔹 **Name:** Faisal Ahammed
-- 🔹 **Role:** Web Developer | MERN Stack Developer
-- 🔹 **Education:** Studying **Telecommunication Technology** at Feni Computer Institute (7th Semester)
+## About Me
 
+* **Name:** Faisal Ahammed
+* **Role:** Web Developer | MERN Stack Developer
+* **Education:** Diploma in Telecommunication Engineering, Feni Computer Institute
+* **Graduated:** 2026
+* **Focus:** Frontend Development | Full-Stack Development
 
-## 📫 Contact Me
+---
 
-- 📧 Email: faisalahammed003@gmail.com
-- 🔗 Facebook:  facebook.com/iamfaisalahammed
-- 🔗 linkedin: https://www.linkedin.com/in/faisalahammed
+## Technologies & Skills
 
-Feel free to check out my work and reach out for collaboration! 😊
+* **Frontend:** React.js, JavaScript, HTML5, CSS3, Tailwind CSS
+* **Backend:** Node.js, Express.js, REST API
+* **Database:** MongoDB
+* **Authentication:** Firebase Authentication, JWT
+* **Tools:** Git, GitHub, Vercel, Figma
+* **Other:** TanStack Query, Responsive Web Design, SEO
+
+## Contact
+
+* **Email:**    iamfaisalahammed@gmail.com
+* **Facebook:** https://www.facebook.com/iamfaisalahammed
+* **LinkedIn:** https://www.linkedin.com/in/faisalahammed/
+* **GitHub:**   https://github.com/iamfaisalahammed
+
+---
+
+Feel free to explore my projects and get in touch for collaboration or opportunities.
